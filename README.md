@@ -1,4 +1,4 @@
-# Demo : https://zz22558822.github.io/22-07-18-FullPageUI-v5/
+# 22-07-18-FullPageUI-v5
 
 更新內容 :
 
@@ -10,3 +10,5 @@
 3.設定 12:30、17:30 自動重整網頁
   使用 window.location.reload(true);
   //備用 location.reload(true);
+
+Demo : https://zz22558822.github.io/22-07-18-FullPageUI-v5/
