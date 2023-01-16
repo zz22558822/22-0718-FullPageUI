@@ -1,0 +1,501 @@
+@import 'reset';
+@import './mixin/RWD';
+
+$purple :#8A82CC;
+$orange :#FFA573;
+$orange2 :#FF851B;
+$orange3 :#FF8000;
+$yello : #F5D105;
+$yello2 : #ffff00;
+$blue : #73C0D8;
+// 生產色
+$green : #73d89a;
+$green1 : green ;
+$no : #A5A5A5;
+$title: #333333;
+$text: #666666;
+
+
+$bg : #525252;
+$bg1 : #414141;
+$bg2 : #313131;
+
+$bg3 : #17223b;
+$bg4 : #263859;
+$bg5 : #6b778d;
+
+// 閒置色
+$title2 : #ff6768;
+
+// 陰影色
+$br1 : #ABABAB;
+$br2 : #242424;
+
+
+html,body{
+    // // 背景漸層 SEO過
+    // background: linear-gradient(0deg, $text 40%, #646464 60%);
+    // background: -moz-linear-gradient(0deg, $text 40%, #646464 60%);
+    // background: -webkit-linear-gradient(0deg, $text 40%, #646464 60%);
+    // background: -o-linear-gradient(0deg, $text 40%, #646464 60%);
+
+    // 藏青色漸層
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    
+    // 藍紫色漸層
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    
+    // 統一字型 FireFox 也能正常大小顯示
+    font-family: "Times New Roman";
+
+    // 字體邊框
+    text-shadow: 3px 3px 0px #000;
+    // -webkit-text-stroke: 2px #000;
+    @include mobile-1300{
+        text-shadow: 2px 2px 0px #000;
+    }
+    @include mobile-767{
+        text-shadow: 1px 1px 0px #000;
+    }
+}
+
+
+.wrap{
+    margin: 0 auto;
+    .notData{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+        z-index: 999;
+        min-width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        p{
+            padding-bottom: 20px;
+            font-size: 150px;
+            text-align: center;
+            font-weight: bold;
+            color: $title2;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+            // 依大小來自動推擠RWD
+            @include mobile-1850{
+                font-size: 130px;
+            }
+            @include mobile-1700{
+                font-size: 120px;
+            }
+            @include mobile-1600{
+                font-size: 110px;
+            }
+            @include mobile-1300{
+                font-size: 100px;
+            }
+            @include mobile-1100{
+                font-size: 80px;
+            }
+            @include mobile-914{
+                font-size: 60px;
+            }
+            @include mobile-767{
+                font-size: 50px;
+            }
+            @include mobile-620{
+                font-size: 40px;
+            }
+            @include mobile-480{
+                font-size: 30px;
+            }
+        }
+        &.no{
+            display: none;
+        }
+    }
+    .card{
+        font-size: 120px;
+        color: #FFF;
+        // color: $title2;
+        font-weight: bold;
+        margin: 25px auto;
+        padding: 0 10px;
+        // 依大小來自動推擠RWD
+        @include mobile-1850{
+            font-size: 110px;
+        }
+        @include mobile-1700{
+            font-size: 85px;
+        }
+        @include mobile-1600{
+            font-size: 75px;
+        }
+        @include mobile-1300{
+            font-size: 65px;
+        }
+        @include mobile-1100{
+            font-size: 50px;
+        }
+
+        
+        // 專為 2F工程電視使用
+        @include mobile-962{
+            margin: 5px auto 25px auto;
+        }
+        @include mobile-958{
+            margin: 25px auto;
+        }
+
+
+        @include mobile-914{
+            font-size: 45px;
+        }
+        @include mobile-767{
+            font-size: 30px;
+            margin-top: 35px;
+            margin-bottom: 35px;
+        }
+        @include mobile-620{
+            font-size: 24px;
+        }
+        .card-top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .name{
+                width: 33%;
+                padding: 5px;
+                border: 3px solid #FFF;
+                margin: 5px;
+                border-radius: 50px;
+                text-align: center;
+                // 不換行
+                white-space: nowrap;
+                
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+
+                // 內外陰影 2
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+
+                background: rgba(255,255,255,0.3);;
+                
+                
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+
+                h2{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    font-size: 20px;
+                    display: inline;
+                }
+            }
+
+            .condition{
+                width: 33%;
+                padding: 5px;
+                border: 3px solid #FFF;
+                margin: 5px;
+                border-radius: 50px;
+                text-align: center;
+
+                // 07-18 更新 添加狀態列 不超過
+                white-space: nowrap;
+                overflow: hidden;
+                padding: 5px 15px;
+                
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+
+                background: rgba(255,255,255,0.3);;
+
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+
+
+                p{
+                    &.ing{
+                        color: $green;
+                    }
+                    &.stop{
+                        // color: $title2;
+                        // 因協理要求更改閒置配色，但因配色基本用光，剩餘藍色。
+                        color: #0466c8;
+                    }
+                }
+                h2{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    font-size: 20px;
+                    display: inline;
+                }
+            }
+
+            // .start-time{
+            //     width: 30%;
+            //     padding: 20px 0;
+            //     border: 3px solid #FFF;
+            //     margin: 20px;
+            //     border-radius: 50px;
+            //     text-align: center;
+            //     display: flex;
+            //     flex-direction: column;
+            //     justify-content: center;
+            //     align-items: center;
+                
+            //     // 內外陰影
+            //     box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+            //     -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+            //     -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+            //     -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+            //     p{
+            //         padding: 15px 60px;
+            //         font-size: 50px;
+            //     }
+            //     h2{
+            //         position: absolute;
+            //         top: 10%;
+            //         left: 10%;
+            //         font-size: 20px;
+            //         display: inline;
+            //     }
+            // }
+            .start-time{
+                width: 33%;
+                padding: 5px;
+                border: 3px solid #FFF;
+                margin: 5px;
+                border-radius: 50px;
+                text-align: center;
+
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+
+                background: rgba(255,255,255,0.3);
+
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+
+            }
+        }
+        .card-mid{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .info{
+                width: 100%;
+                padding: 10px;
+                border: 3px solid #FFF;
+                margin: 0 5px;
+                border-radius: 50px;
+                text-align: center;
+
+
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+
+                background: rgba(255,255,255,0.3);
+
+
+                @include mobile-767{
+                    padding: 5px;
+                    margin: 10px 0;
+                }
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+
+                h2{
+                    text-align: left;
+                    font-size: 35px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    text-align: center;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+        .card-down{
+            display: flex;
+            justify-content: space-between;
+            .end-time{
+                width: 49%;
+                padding: 5px;
+                border: 3px solid #FFF;
+                margin: 5px;
+                border-radius: 50px;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+
+
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+
+
+                background: rgba(255,255,255,0.3);
+
+                // 依大小來自動推擠RWD 額外使用 1780~1775來滿足2F 電視牆
+                @include mobile-1850{
+                    font-size: 110px;
+                }
+                @include mobile-1780{
+                    font-size: 90px;
+                }
+                @include mobile-1775{
+                    font-size: 110px;
+                }
+                @include mobile-1700{
+                    font-size: 85px;
+                }
+                @include mobile-1600{
+                    font-size: 75px;
+                }
+                @include mobile-1300{
+                    font-size: 65px;
+                }
+                @include mobile-1100{
+                    font-size: 50px;
+                }
+                @include mobile-914{
+                    font-size: 45px;
+                }
+                @include mobile-767{
+                    font-size: 30px;
+                }
+                @include mobile-620{
+                    font-size: 24px;
+                }
+                @include mobile-480{
+                    font-size: 20px;
+                }
+                @include mobile-375{
+                    font-size: 17px;
+                }
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+                h2{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    font-size: 20px;
+                    display: inline;
+                }
+                p{
+                    &.stop-y{
+                        color: $yello2;
+                    }
+                    &.stop-o{
+                        color: $orange2;
+                    }
+                    &.stop{
+                        color: $title2;
+                    }
+                }
+            }
+            .expected{
+                width: 49%;
+                padding: 5px;
+                border: 3px solid #FFF;
+                margin: 5px;
+                border-radius: 50px;
+                text-align: center;
+                
+                // 內外陰影
+                // box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,10px 10px 30px 20px $br2;
+
+                // 內外陰影 2
+                // box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -webkit-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -moz-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                // -o-box-shadow: inset 0px 0px 50px 0px $br1,5px 5px 5px 1px $br2;
+                
+                background: rgba(255,255,255,0.3);
+
+                @include mobile-620{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+                // &.no2{
+                //     color: #000;
+                //     background: #FFF;
+                //     border: 3px solid #000;
+                // }
+                
+
+                p{
+                    padding: 20px 60px;
+                    display: inline;
+                    @include mobile-1300{
+                        padding: 20px;
+                    }
+                    @include mobile-620{
+                        display: block;
+                        padding: 0;
+                    }
+                }
+                h2{
+                    position: absolute;
+                    top: 10%;
+                    left: 10%;
+                    font-size: 40px;
+                    display: inline;
+                }
+            }
+        }
+    }
+
+}
+
