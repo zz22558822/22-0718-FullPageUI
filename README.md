@@ -11,4 +11,4 @@
   使用 window.location.reload(true);
   //備用 location.reload(true);
 
-Demo : https://zz22558822.github.io/22-07-18-FullPageUI-v5/
+Demo : https://zz22558822.github.io/22-0718-FullPageUI/
